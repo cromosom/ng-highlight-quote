@@ -1,0 +1,4 @@
+::ng-deep .highlight {
+    background-color: tomato;
+    color: #fff;
+}
