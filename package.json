@@ -4,11 +4,11 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "setup": "docker build -t highlight_image .",
+    "up": "docker run --rm --name highlight -p 4200:4200 -p 9876:9876 -p 9222:9222 -v ${PWD}:/app -d highlight_image",
+    "serve": "npm run up && docker exec -it -u root highlight bash -c \"ng serve --port 4200 --host 0.0.0.0\" ; npm run down || true",
+    "test": "npm run up && docker exec -it -u root highlight bash -c \"ng test\" ; npm run down || true",
+    "down": "docker kill highlight"
   },
   "private": true,
   "dependencies": {
