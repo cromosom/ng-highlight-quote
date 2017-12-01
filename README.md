@@ -1,27 +1,35 @@
-# Infarm
+# Highlight Quote
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
+This simple angular 4 directive should highlight quotes in a text.
 
-## Development server
+To ensure stable execution I added a dockerfile and special npm commands to run the app in docker.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Setup
 
-## Code scaffolding
+To run it locally angular/cli should be installed globally. Then run:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`npm install`
 
-## Build
+To run it in a docker environment:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+`npm run build`
 
-## Running unit tests
+## Run
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Local:
 
-## Running end-to-end tests
+`ng serve`
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+In docker:
 
-## Further help
+`npm run serve`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Test
+
+Local:
+
+`ng test`
+
+In docker:
+
+`npm run test`
