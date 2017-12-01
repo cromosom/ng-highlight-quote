@@ -26,6 +26,8 @@ In docker:
 
 `npm run serve`
 
+You can access the app in a browser on localhost:4200.
+
 ## Test
 
 Local:
@@ -35,3 +37,5 @@ Local:
 In docker:
 
 `npm run test`
+
+You can access the tests in a browser on localhost:9876.
