@@ -18,6 +18,12 @@ export class HighlightQuoteDirective implements OnInit {
     this.getFrequentQuote(this.textElements, this.highlightQuote);
   }
 
+  /**
+   * iterates over a HTMLCollection of text elements and modifies the dom where the given quote matches
+   *
+   * @param textElements
+   * @param highlightQuote
+   */
   getFrequentQuote(textElements: HTMLCollection, highlightQuote: string): void {
     for (let i = 0; i < textElements.length; i++) {
       const match = textElements[i].textContent.match(highlightQuote);
