@@ -12,6 +12,8 @@ To run it locally angular/cli should be installed globally. Then run:
 
 To run it in a docker environment:
 
+`npm install`
+
 `npm run setup`
 
 ## Run
